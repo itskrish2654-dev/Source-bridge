@@ -40,7 +40,7 @@
           <a href="#fastener-sourcing">Fastener Sourcing</a>
           <a href="#our-process">Our Process</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="mailto:rfq@source-bridge.in?subject=Source%20Bridge%20%7C%20Benchmark%20One%20SKU&amp;body=Product%20%2F%20SKU%3A%0D%0ASpecifications%20or%20drawing%3A%0D%0AEstimated%20quantity%3A%0D%0AMaterial%2C%20grade%2C%20or%20standard%3A%0D%0ADestination%20country%3A%0D%0ATarget%20delivery%20date%3A">Benchmark One SKU <span aria-hidden="true">↗</span></a>
+          <a class="nav-cta" href="#requirement-form">Benchmark One SKU <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
@@ -57,7 +57,7 @@
           <h1 id="hero-heading">Find the right Indian manufacturer.<br><em>Without the guesswork.</em></h1>
           <p class="hero-lede">Source Bridge helps overseas industrial buyers identify suitable Indian manufacturers, compare pricing, MOQs and lead times, and assess supplier capabilities before committing to an order.</p>
           <div class="hero-actions">
-            <a class="button button-light" href="mailto:rfq@source-bridge.in?subject=Source%20Bridge%20%7C%20Benchmark%20One%20SKU&amp;body=Product%20%2F%20SKU%3A%0D%0ASpecifications%20or%20drawing%3A%0D%0AEstimated%20quantity%3A%0D%0AMaterial%2C%20grade%2C%20or%20standard%3A%0D%0ADestination%20country%3A%0D%0ATarget%20delivery%20date%3A">Benchmark One SKU <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="#requirement-form">Benchmark One SKU <span aria-hidden="true">↗</span></a>
             <a class="text-link text-link-light" href="#our-process">See How It Works <span aria-hidden="true">↓</span></a>
           </div>
           <p class="hero-reassurance">Start with one product specification. Free initial sourcing benchmark for suitable enquiries. No obligation to place an order.</p>
@@ -154,7 +154,7 @@
               </div>
             </div>
             <p class="fastener-closing">Send us your specification, quantity and destination. We'll assess whether suitable Indian manufacturing options can be identified.</p>
-            <a class="text-link text-link-dark" href="mailto:rfq@source-bridge.in?subject=Source%20Bridge%20%7C%20Fastener%20Requirement&amp;body=Fastener%20type%20%2F%20SKU%3A%0D%0ASize%2C%20drawing%2C%20or%20standard%3A%0D%0AMaterial%2C%20grade%2C%20and%20coating%3A%0D%0AEstimated%20quantity%3A%0D%0ADestination%20country%3A%0D%0ATarget%20delivery%20date%3A">Benchmark My Fastener SKU <span aria-hidden="true">↗</span></a>
+            <a class="text-link text-link-dark" href="#requirement-form">Benchmark My Fastener SKU <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -201,21 +201,29 @@
             <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> 04 / Start a conversation</p>
             <h2 id="contact-heading">Have one fastener SKU you'd like to <em>source from India?</em></h2>
             <p>Send us the specification and approximate quantity. We'll review your requirement and discuss suitable Indian manufacturing options.</p>
-            <a class="button button-light" href="mailto:rfq@source-bridge.in?subject=Source%20Bridge%20%7C%20Benchmark%20One%20SKU&amp;body=Product%20%2F%20SKU%3A%0D%0ASpecifications%20or%20drawing%3A%0D%0AEstimated%20quantity%3A%0D%0AMaterial%2C%20grade%2C%20or%20standard%3A%0D%0ADestination%20country%3A%0D%0ATarget%20delivery%20date%3A">Benchmark One SKU <span aria-hidden="true">↗</span></a>
+            <a class="button button-light" href="#requirement-form">Benchmark One SKU <span aria-hidden="true">↗</span></a>
             <p class="contact-reassurance">Free initial benchmark for suitable enquiries. No obligation to place an order. Any additional sampling, inspection or procurement services will be discussed separately.</p>
           </div>
           <div class="contact-details">
-            <p class="detail-label">THE BEST PLACE TO BEGIN</p>
-            <h3>One clear requirement.</h3>
-            <p>To help us understand your sourcing need, include:</p>
-            <ul>
-              <li>Product / part name</li>
-              <li>Material / grade</li>
-              <li>Size / technical standard</li>
-              <li>Quantity</li>
-              <li>Delivery country</li>
-              <li>Drawing or specification, if available</li>
-            </ul>
+            <p class="detail-label">START WITH ONE REQUIREMENT</p>
+            <h3>Tell us what you need.</h3>
+            <p>Complete the essentials below. Your email app will open a prepared enquiry for you to review and send.</p>
+            <form id="requirement-form" class="requirement-form" aria-label="Sourcing requirement enquiry" action="mailto:rfq@source-bridge.in" method="post" enctype="text/plain">
+              <div class="form-grid">
+                <div class="form-field"><label for="buyer-name">Your name <span aria-hidden="true">*</span></label><input id="buyer-name" name="buyerName" type="text" autocomplete="name" maxlength="100" required></div>
+                <div class="form-field"><label for="buyer-email">Your email <span aria-hidden="true">*</span></label><input id="buyer-email" name="buyerEmail" type="email" autocomplete="email" maxlength="150" required></div>
+                <div class="form-field"><label for="buyer-company">Company</label><input id="buyer-company" name="company" type="text" autocomplete="organization" maxlength="120"></div>
+                <div class="form-field"><label for="delivery-country">Delivery country <span aria-hidden="true">*</span></label><input id="delivery-country" name="destination" type="text" autocomplete="country-name" maxlength="80" required></div>
+                <div class="form-field"><label for="part-name">Product / part name <span aria-hidden="true">*</span></label><input id="part-name" name="product" type="text" maxlength="120" required></div>
+                <div class="form-field"><label for="quantity">Approx. quantity <span aria-hidden="true">*</span></label><input id="quantity" name="quantity" type="text" inputmode="text" maxlength="80" placeholder="e.g. 5,000 pieces" required></div>
+                <div class="form-field"><label for="material-grade">Material / grade</label><input id="material-grade" name="material" type="text" maxlength="100" placeholder="e.g. SS304 / A2"></div>
+                <div class="form-field"><label for="size-standard">Size / standard</label><input id="size-standard" name="standard" type="text" maxlength="100" placeholder="e.g. M10 × 40, DIN 933"></div>
+                <div class="form-field form-field-wide"><label for="requirement-details">Other details or drawing link</label><textarea id="requirement-details" name="details" rows="3" maxlength="600" placeholder="Coating, packaging, target date or a link to your drawing"></textarea></div>
+              </div>
+              <button class="button button-light form-submit" type="submit">Create email enquiry <span aria-hidden="true">↗</span></button>
+              <p class="form-note">Your email app will open a draft. Attach any drawing there, then press Send. Nothing is sent automatically.</p>
+              <p class="form-status" role="status" hidden>If your email app did not open, please email us directly using the address below.</p>
+            </form>
             <a class="contact-email" href="mailto:rfq@source-bridge.in">rfq@source-bridge.in <span aria-hidden="true">↗</span></a>
           </div>
         </div>
