@@ -207,8 +207,8 @@
           <div class="contact-details">
             <p class="detail-label">START WITH ONE REQUIREMENT</p>
             <h3>Tell us what you need.</h3>
-            <p>Complete the essentials below. Your email app will open a prepared enquiry for you to review and send.</p>
-            <form id="requirement-form" class="requirement-form" aria-label="Sourcing requirement enquiry" action="mailto:rfq@source-bridge.in" method="post" enctype="text/plain">
+            <p>Complete the essentials below, then choose where to open your prepared email.</p>
+            <form id="requirement-form" class="requirement-form" aria-label="Sourcing requirement enquiry" method="post">
               <div class="form-grid">
                 <div class="form-field"><label for="buyer-name">Your name <span aria-hidden="true">*</span></label><input id="buyer-name" name="buyerName" type="text" autocomplete="name" maxlength="100" required></div>
                 <div class="form-field"><label for="buyer-email">Your email <span aria-hidden="true">*</span></label><input id="buyer-email" name="buyerEmail" type="email" autocomplete="email" maxlength="150" required></div>
@@ -220,11 +220,20 @@
                 <div class="form-field"><label for="size-standard">Size / standard</label><input id="size-standard" name="standard" type="text" maxlength="100" placeholder="e.g. M10 × 40, DIN 933"></div>
                 <div class="form-field form-field-wide"><label for="requirement-details">Other details or drawing link</label><textarea id="requirement-details" name="details" rows="3" maxlength="600" placeholder="Coating, packaging, target date or a link to your drawing"></textarea></div>
               </div>
-              <button class="button button-light form-submit" type="submit">Create email enquiry <span aria-hidden="true">↗</span></button>
-              <p class="form-note">Your email app will open a draft. Attach any drawing there, then press Send. Nothing is sent automatically.</p>
-              <p class="form-status" role="status" hidden>If your email app did not open, please email us directly using the address below.</p>
+              <p class="provider-label">Open your email draft in</p>
+              <div class="email-provider-actions">
+                <button class="button button-light form-submit" type="submit" value="gmail">Gmail <span aria-hidden="true">↗</span></button>
+                <button class="button button-outline form-submit" type="submit" value="outlook">Outlook.com <span aria-hidden="true">↗</span></button>
+                <button class="provider-work" type="submit" value="microsoft365">Microsoft 365 work or school <span aria-hidden="true">↗</span></button>
+              </div>
+              <p class="form-note">The draft opens in a new tab. Sign in if needed, attach any drawing, and press Send. Nothing is sent automatically.</p>
+              <p class="form-status" role="status" hidden>Your draft opened in a new tab. Review the details and press Send there.</p>
             </form>
-            <a class="contact-email" href="mailto:rfq@source-bridge.in">rfq@source-bridge.in <span aria-hidden="true">↗</span></a>
+            <div class="contact-email-row">
+              <span class="contact-email">rfq@source-bridge.in</span>
+              <button class="copy-email" type="button">Copy address</button>
+            </div>
+            <p class="copy-status" role="status" hidden>Email address copied.</p>
           </div>
         </div>
         <footer class="site-footer page-shell">

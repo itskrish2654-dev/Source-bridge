@@ -67,12 +67,40 @@ if (requirementForm) {
       'I understand this is an initial enquiry. I will attach any drawing to this email before sending it.',
     ].join('\r\n');
 
-    const mailLink = document.createElement('a');
-    mailLink.href = `mailto:rfq@source-bridge.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    mailLink.hidden = true;
-    document.body.append(mailLink);
-    mailLink.click();
-    mailLink.remove();
+    const provider = event.submitter?.value || 'gmail';
+    const compose = provider === 'gmail'
+      ? new URL('https://mail.google.com/mail/')
+      : new URL(provider === 'microsoft365'
+        ? 'https://outlook.office.com/mail/deeplink/compose'
+        : 'https://outlook.live.com/mail/0/deeplink/compose');
+    if (provider === 'gmail') {
+      compose.searchParams.set('view', 'cm');
+      compose.searchParams.set('fs', '1');
+      compose.searchParams.set('su', subject);
+    } else {
+      compose.searchParams.set('subject', subject);
+    }
+    compose.searchParams.set('to', 'rfq@source-bridge.in');
+    compose.searchParams.set('body', body);
+
+    const opened = window.open(compose.toString(), '_blank');
+    if (opened) opened.opener = null;
+    else window.location.assign(compose.toString());
     requirementForm.querySelector('.form-status').hidden = false;
+  });
+}
+
+const copyEmailButton = document.querySelector('.copy-email');
+
+if (copyEmailButton) {
+  copyEmailButton.addEventListener('click', async () => {
+    const status = document.querySelector('.copy-status');
+    try {
+      await navigator.clipboard.writeText('rfq@source-bridge.in');
+      status.textContent = 'Email address copied.';
+    } catch {
+      status.textContent = 'Select and copy the email address shown above.';
+    }
+    status.hidden = false;
   });
 }

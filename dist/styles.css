@@ -185,11 +185,20 @@ ul, ol { margin: 0; padding: 0; }
 .form-field textarea { min-height: 86px; resize: vertical; }
 .form-field input::placeholder, .form-field textarea::placeholder { color: #afc1cb; opacity: 1; }
 .form-field input:focus, .form-field textarea:focus { border-color: #d0e4ef; outline: 2px solid #80aeca; outline-offset: 2px; }
-.form-submit { width: 100%; margin-top: 18px; cursor: pointer; }
+.provider-label { margin: 21px 0 10px; color: #e5edf1; font-size: 11px; font-weight: 700; }
+.email-provider-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.form-submit { width: 100%; min-width: 0; cursor: pointer; }
+.button-outline { color: #fff; background: transparent; border-color: #a9bfcb; }
+.button-outline:hover { color: var(--navy); background: #fff; }
+.provider-work { grid-column: 1 / -1; justify-self: start; display: inline-flex; gap: 15px; align-items: center; padding: 8px 0; border: 0; color: #d3e5ee; background: transparent; font-size: 12px; font-weight: 700; cursor: pointer; }
+.provider-work:hover { color: #fff; text-decoration: underline; }
 .form-note { margin: 11px 0 0; color: #b9cbd5; font-size: 11px; line-height: 1.55; }
 .form-status { margin: 11px 0 0; color: #e5edf1; font-size: 11px; line-height: 1.55; }
-.contact-email { display: inline-flex; gap: 20px; align-items: center; margin-top: 25px; padding-bottom: 7px; border-bottom: 1px solid #bbcdd7; color: #fff; font-size: 15px; font-weight: 700; }
-.contact-email span { font-size: 19px; font-weight: 400; }
+.contact-email-row { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin-top: 25px; }
+.contact-email { padding-bottom: 7px; border-bottom: 1px solid #bbcdd7; color: #fff; font-size: 15px; font-weight: 700; }
+.copy-email { padding: 6px 0; border: 0; color: #d3e5ee; background: transparent; font-size: 12px; font-weight: 700; cursor: pointer; }
+.copy-email:hover { color: #fff; text-decoration: underline; }
+.copy-status { margin: 10px 0 0; color: #e5edf1; font-size: 11px; }
 .site-footer { display: flex; align-items: center; flex-wrap: wrap; gap: 22px 43px; padding-block: 26px 33px; border-top: 1px solid rgba(255,255,255,.22); }
 .footer-brand { font-size: 20px; }
 .site-footer p { margin: 0; color: #bbcdd7; font-size: 11px; }
@@ -305,6 +314,7 @@ ul, ol { margin: 0; padding: 0; }
   .contact-heading-wrap > p:not(.eyebrow) { font-size: 14px; }
   .contact-details { padding-left: 22px; }
   .form-grid { grid-template-columns: 1fr; }
+  .email-provider-actions { grid-template-columns: 1fr; }
   .site-footer { gap: 15px 28px; }
   .footer-brand { flex-basis: 100%; }
 }
